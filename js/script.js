@@ -56,13 +56,15 @@ var timeout = setTimeout (function () {
         do { numeroUtente = parseInt(prompt("Inserisci il numero che ha scelto Simon!")); } 
         while (isNaN(numeroUtente) || numeroUtente < 1 || numeroUtente > 100);
     // se il numero isinarray lo pushiamo ad un altro array copia
-        if (duplicato(numeroUtente, numeriRandom)) {
+        if (duplicato (numeroUtente, numeriUtente)) {
+            alert("Hai inserito un numero già digitato! Hai perso un tentativo.");
+        } else if (duplicato(numeroUtente, numeriRandom)) {
             numeriUtente.push(numeroUtente);
         }
     }
-  
+    alert("Hai indovinato " + numeriUtente.length + " numero/i su 5!\nI numeri di Simon erano " + numeriRandom + "\nI numeri che hai inserito erano: " + numeriUtente + "\nRicarica la pagina per giocare di nuovo!");
     
-}, 3000);
+}, 30000);
 
 
 
