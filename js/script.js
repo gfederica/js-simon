@@ -56,6 +56,7 @@ var timeout = setTimeout (function () {
         do { numeroUtente = parseInt(prompt("Inserisci il numero che ha scelto Simon!")); } 
         while (isNaN(numeroUtente) || numeroUtente < 1 || numeroUtente > 100);
     // se il numero isinarray lo pushiamo ad un altro array copia
+    // se il numero è un doppione diamo un alert
         if (duplicato (numeroUtente, numeriUtente)) {
             alert("Hai inserito un numero già digitato! Hai perso un tentativo.");
         } else if (duplicato(numeroUtente, numeriRandom)) {
